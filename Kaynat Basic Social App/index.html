@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>Social Media</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome Link -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+	<section class="fixed-top">
+		<nav class="navbar  navbar-light" id="mynav">
+             <div class="container-fluid">
+
+                <!-- <img src="assets/img/logo.png" class="logo ms-5" width="160"> -->
+                <div class="app-name"><h3>My Social Media App</h3> </div>
+
+                <div class="right-icon">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <img src="assets/img/notification.png" width="28">
+                            <img src="assets/img/message.png" width="28">
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="search-item">
+                    <form class="d-flex ms-5">
+                        <input style="width: 350px" class="form-control me-2 rounded-pill" id="search" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+
+                <div class="user-nav-icon">
+                    <img class="rounded-pill" onclick="settingsMenuToggle()" src="assets/img/profile.jpg" width="40">
+                </div>
+                
+                 
+              
+                <div class="setting-menu">
+                   
+                     
+                    
+                    <div class="setting-menu-inner">
+                        <div class="user-profile">
+                            <img src="assets/img/member-1.png">
+                            <div>
+                                <p>User</p>
+                                <a href="#">See Your Profile</a>
+                            </div>
+                        </div>
+                        <hr>
+
+                       
+                        <div class="user-profile">
+                             <img src="assets/img/feedback.png">
+                             <div>
+                                <p>Give Feedback</p>
+                                <a href="#">Help us to imporve the new design</a>
+                            </div>
+                        </div>
+                        <hr>
+                       
+                        <div class="setting-link">
+                            <img src="assets/img/setting.png" class="setting-icon">
+                            <a href="#">Setting & Privacy<img src="assets/img/arrow.png" width="10px"></a>
+                        </div>
+
+                       
+                        <div class="setting-link mt-1">
+                           <img src="assets/img/help.png" class="setting-icon">
+                           <a href="#">Help & Support<img src="assets/img/arrow.png" width="10px"></a>
+                        </div>
+                     
+                        <div class="setting-link mt-1">
+                           <img src="assets/img/logout.png" class="setting-icon">
+                           <a href="#" onclick="Logout();">logout<img src="assets/img/arrow.png" width="10px"></a>
+                        </div>
+                    </div>
+            </div>
+        </nav>
+	</section>
+
+	<section class="container mt-5">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="left-side-bar">
+            <div class="shortcut-links" >
+                <p>Your Friends</p>
+                <div class="search-item">
+                    <form class="d-flex mb-3">
+                        <input class="form-control me-2 rounded-pill" onkeyup="searchF()" id="search" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+                <div id="friends" id="users">
+                <a href="#" onclick=""><img src="assets/img/member-1.png" data-bs-toggle="modal" data-bs-target="#exampleModal">ahmed</a>
+                 </div>
+            </div>
+        </div>
+			</div>
+
+			<div class="col-md-6">
+				<!-----main content---------------->
+
+        <div class="main-content">
+            
+                <!-----Posts---------------->
+                <div class="write-post-container mt-3" >
+                    <div class="user-profile">
+                        <img src="assets/img/profile-pic.png" alt="">
+                        <div>
+                            <p>John nich</p>
+                            <small>Public<i class="fas fa-caret-down"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-input-container">
+                        <textarea name="" id="" rows="1" placeholder="What's in your mind....."></textarea>
+                        <div class="add-post-links">
+                            <a href="#"><img src="assets/img/live-video.png" alt="">Live Video</a>
+                            <a href="#"><img src="assets/img/photo.png" alt="">Photo/Video</a>
+                            <a href="#"><img src="assets/img/feeling.png" alt="">Feeling/Activity</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <section class="userposts">
+
+                    <div class="post-container" id="User-post">
+                        <div class="post-row">
+                            <div class="user-profile">
+                                <img src="assets/img/profile-pic.png" alt="">
+                                <div>
+                                <p>John nich</p>
+                                <span>June 22 2021, 1:30 pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                        
+                    </div>
+                    
+                    <p class="post-text">Hi this is my 1st post and i have created some more.......
+                        <a href="#">#Dummy Posts</a>
+                    </p>
+                    <img src="assets/img/feed-image-1.png" class="post-img">
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="assets/img/like-blue.png" alt="">120</div>
+                            <div><img src="assets/img/comments.png" alt="">45</div>
+                            <div><img src="assets/img/share.png" alt="">20</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="assets/img/profile-pic.png" alt=""> <i class="fas fa-caret-down"></i>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="mb-3 mt-3" id="cmt">
+                        
+                        <input type="text" class="form-control border-light" id="exampleFormControlInput1" placeholder="Comments">
+                        <p>commentttttt</p>
+                        </div>
+                        
+                    </div>
+                </section>
+                    <button type="button" class="load-more-btn">Load More</button>
+
+        </div>
+			</div>
+
+			<div class="col-md-3">
+                <div class="ri8-side-bar">
+                	<div class="sidebar-title">
+                        <h4>Tags</h4>
+                       <a href="#">See All</a>
+                   </div>               
+                   <div class="tags"  id="tags">
+                   <a href="#" class="tags"><span  class="badge mr-1">Secondary</span></a>
+                   </a>
+
+                    </div>
+            </div>
+        </div>
+
+			</div>
+		</div>
+	</section>
+
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="assets/js/fetch.js"></script>
+<script src="assets/js/fetchTags.js"></script>
+<script src="assets/js/fetchUsers.js"></script>
+<!-- <script src="assets/js/commentsFetch.js"></script> -->
+ <script src="assets/js/logout.js"></script>
+ <script>
+        var settingsmenu = document.querySelector(".setting-menu");
+     
+
+        function settingsMenuToggle() {
+            settingsmenu.classList.toggle("setting-menu-height")
+        }   
+       
+</script>
+</body>
+</html>
